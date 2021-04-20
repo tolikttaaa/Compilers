@@ -1,0 +1,18 @@
+Var a, b, c
+Begin
+a = 15
+c = 10
+b = (a + c) * a / (c - 5)
+
+// l = 4
+
+WHILE (-(c > a) AND not(b > a )) DO
+Begin
+c = c + 4
+End
+
+c = a - b
+
+a = 2 * b - c * 4
+
+End

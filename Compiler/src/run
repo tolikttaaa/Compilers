@@ -1,0 +1,6 @@
+#!/bin/bash
+
+bison SyntaxAnalyser.y
+jflex lex.flex
+javac Compiler.java
+java Compiler $1

@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Compiler/Compiler.iml" filepath="$PROJECT_DIR$/Compiler/Compiler.iml" />
       <module fileurl="file://$PROJECT_DIR$/Compilers.iml" filepath="$PROJECT_DIR$/Compilers.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DFA/DFA.iml" filepath="$PROJECT_DIR$/DFA/DFA.iml" />
     </modules>
   </component>
 </project>
