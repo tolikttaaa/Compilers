@@ -344,7 +344,7 @@ public class SyntaxAnalyser
   case 7:
   if (yyn == 7)
     /* "SyntaxAnalyser.y":48  */
-               { yyval = compiler.astNode("Operators", ((Tree)(yystack.valueAt (0)))); };
+               { yyval = ((Tree)(yystack.valueAt (0))); };
   break;
     
 
@@ -365,7 +365,7 @@ public class SyntaxAnalyser
   case 10:
   if (yyn == 10)
     /* "SyntaxAnalyser.y":54  */
-                                           { yyval = compiler.astNode("Operator", ((Tree)(yystack.valueAt (1)))); };
+                                           { yyval = compiler.astNode("Operators", ((Tree)(yystack.valueAt (1)))); };
   break;
     
 
@@ -379,21 +379,21 @@ public class SyntaxAnalyser
   case 12:
   if (yyn == 12)
     /* "SyntaxAnalyser.y":60  */
-                             { yyval = compiler.astNode("Expression", new Tree("U"), ((Tree)(yystack.valueAt (0)))); };
+                             { yyval = compiler.astNode("Expression", ((Tree)(yystack.valueAt (0))), new Tree("U")); };
   break;
     
 
   case 13:
   if (yyn == 13)
     /* "SyntaxAnalyser.y":61  */
-                                {yyval = compiler.astNode("Expression", new Tree("not"), ((Tree)(yystack.valueAt (0)))); };
+                                {yyval = compiler.astNode("Expression", ((Tree)(yystack.valueAt (0))), new Tree("not")); };
   break;
     
 
   case 14:
   if (yyn == 14)
     /* "SyntaxAnalyser.y":62  */
-                                             { yyval = compiler.astNode("Expression", ((Tree)(yystack.valueAt (1)))); };
+                                             { yyval = ((Tree)(yystack.valueAt (1))); };
   break;
     
 
@@ -449,21 +449,21 @@ public class SyntaxAnalyser
   case 22:
   if (yyn == 22)
     /* "SyntaxAnalyser.y":70  */
-                                           { yyval = compiler.astNode("Expression", ((Tree)(yystack.valueAt (2))), new Tree("AND"), ((Tree)(yystack.valueAt (0)))); };
+                                           { yyval = compiler.astNode("Expression", ((Tree)(yystack.valueAt (2))), new Tree("&"), ((Tree)(yystack.valueAt (0)))); };
   break;
     
 
   case 23:
   if (yyn == 23)
     /* "SyntaxAnalyser.y":71  */
-                                            { yyval = compiler.astNode("Expression", ((Tree)(yystack.valueAt (2))), new Tree("OR"), ((Tree)(yystack.valueAt (0)))); };
+                                            { yyval = compiler.astNode("Expression", ((Tree)(yystack.valueAt (2))), new Tree("|"), ((Tree)(yystack.valueAt (0)))); };
   break;
     
 
   case 24:
   if (yyn == 24)
     /* "SyntaxAnalyser.y":72  */
-                                            { yyval = compiler.astNode("Expression", ((Tree)(yystack.valueAt (2))), new Tree("XOR"), ((Tree)(yystack.valueAt (0)))); };
+                                            { yyval = compiler.astNode("Expression", ((Tree)(yystack.valueAt (2))), new Tree("^"), ((Tree)(yystack.valueAt (0)))); };
   break;
     
 

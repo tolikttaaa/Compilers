@@ -45,9 +45,9 @@ public class Tree {
             case ">":
             case "<":
             case "==":
-            case "AND":
-            case "OR":
-            case "XOR":
+            case "&":
+            case "|":
+            case "^":
                 type = "Binary operator";
                 break;
             case "=":
@@ -60,6 +60,9 @@ public class Tree {
                 name = "-";
             case "not":
                 type = "Unary operator";
+                break;
+            case "Expression":
+                type = "Expression";
                 break;
             default:
                 type = null;

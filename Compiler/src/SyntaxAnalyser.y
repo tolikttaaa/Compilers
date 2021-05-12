@@ -45,21 +45,21 @@
       ;
 
   operators:
-      operator { $$ = compiler.astNode("Operators", $1); }
+      operator { $$ = $1; }
       | operator operators { $$ = compiler.astNode("Operators", $1, $2); }
       ;
 
   operator:
      IDENTIFIER APPROPRIATION_OPERATOR expression { $$ = compiler.newAppropriation(yyval.toString(), $3); }
-     | BEGIN_KEYWORD operators END_KEYWORD { $$ = compiler.astNode("Operator", $2); }
+     | BEGIN_KEYWORD operators END_KEYWORD { $$ = compiler.astNode("Operators", $2); }
      | LOOP_START expression DO_KEYWORD operator { $$ = compiler.astNode("Loop", $2, $4); }
      ;
 
 
   expression:
-      UNARY_MINUS expression { $$ = compiler.astNode("Expression", new Tree("U"), $2); }
-      | NOT_OPERATOR expression {$$ = compiler.astNode("Expression", new Tree("not"), $2); }
-      | START_BRACKET expression END_BRACKET { $$ = compiler.astNode("Expression", $2); }
+      UNARY_MINUS expression { $$ = compiler.astNode("Expression", $2, new Tree("U")); }
+      | NOT_OPERATOR expression {$$ = compiler.astNode("Expression", $2, new Tree("not")); }
+      | START_BRACKET expression END_BRACKET { $$ = $2; }
       | expression PLUS expression { $$ = compiler.astNode("Expression", $1, new Tree("+"), $3); }
       | expression MULTIPLY expression { $$ = compiler.astNode("Expression", $1, new Tree("*"), $3); }
       | expression DIVIDE expression { $$ = compiler.astNode("Expression", $1, new Tree("/"), $3); }
@@ -67,9 +67,9 @@
       | expression GRATER_OPERATOR expression { $$ = compiler.astNode("Expression", $1, new Tree(">"), $3); }
       | expression LESS_OPERATOR expression { $$ = compiler.astNode("Expression", $1, new Tree("<+>"), $3); }
       | expression EQUALS_OPERATOR expression { $$ = compiler.astNode("Expression", $1, new Tree("="), $3); }
-      | expression AND_OPERATOR expression { $$ = compiler.astNode("Expression", $1, new Tree("AND"), $3); }
-      | expression OR_OPERATOR expression   { $$ = compiler.astNode("Expression", $1, new Tree("OR"), $3); }
-      | expression XOR_OPERATOR expression  { $$ = compiler.astNode("Expression", $1, new Tree("XOR"), $3); }
+      | expression AND_OPERATOR expression { $$ = compiler.astNode("Expression", $1, new Tree("&"), $3); }
+      | expression OR_OPERATOR expression   { $$ = compiler.astNode("Expression", $1, new Tree("|"), $3); }
+      | expression XOR_OPERATOR expression  { $$ = compiler.astNode("Expression", $1, new Tree("^"), $3); }
       | IDENTIFIER { $$ = compiler.identifierReference(yyval.toString()); }
       | CONSTANT { $$ = compiler.constant(yyval.toString()); }
       ;
