@@ -1,0 +1,150 @@
+(ROOT)
+     (Variables Declaration)
+      |      |-------(Var) [Keyword]
+      |      |-------(Variables list)
+      |             |-------(a) [Identifier]
+      |             |-------(Variables list)
+      |                    |-------(b) [Identifier]
+      |                    |-------(Variables list)
+      |                           |-------(c) [Identifier]
+     (Program Body)
+             |-------(Operators)
+                    |-------(Operator)
+                    |      |-------(=) [Appropriation operator]
+                    |             |-------(a) [Identifier]
+                    |             |-------(15) [Const]
+                    |-------(Operators)
+                           |-------(Operator)
+                           |      |-------(=) [Appropriation operator]
+                           |             |-------(c) [Identifier]
+                           |             |-------(Expression) [Expression]
+                           |                    |-------(10) [Const]
+                           |                    |-------(-) [Unary operator]
+                           |-------(Operators)
+                                  |-------(Operator)
+                                  |      |-------(=) [Appropriation operator]
+                                  |             |-------(b) [Identifier]
+                                  |             |-------(a) [Identifier]
+                                  |-------(Operators)
+                                         |-------(Operator)
+                                         |      |-------(=) [Appropriation operator]
+                                         |             |-------(b) [Identifier]
+                                         |             |-------(Expression) [Expression]
+                                         |                    |-------(Expression) [Expression]
+                                         |                    |      |-------(a) [Identifier]
+                                         |                    |      |-------(+) [Binary operator]
+                                         |                    |      |-------(c) [Identifier]
+                                         |                    |-------(*) [Binary operator]
+                                         |                    |-------(Expression) [Expression]
+                                         |                           |-------(a) [Identifier]
+                                         |                           |-------(/) [Binary operator]
+                                         |                           |-------(Expression) [Expression]
+                                         |                                  |-------(c) [Identifier]
+                                         |                                  |-------(-) [Binary operator]
+                                         |                                  |-------(5) [Const]
+                                         |-------(Operators)
+                                                |-------(Loop)
+                                                |      |-------(Expression) [Expression]
+                                                |      |      |-------(Expression) [Expression]
+                                                |      |      |      |-------(Expression) [Expression]
+                                                |      |      |      |      |-------(c) [Identifier]
+                                                |      |      |      |      |-------(>) [Binary operator]
+                                                |      |      |      |      |-------(a) [Identifier]
+                                                |      |      |      |-------(&) [Binary operator]
+                                                |      |      |      |-------(Expression) [Expression]
+                                                |      |      |             |-------(Expression) [Expression]
+                                                |      |      |             |      |-------(b) [Identifier]
+                                                |      |      |             |      |-------(>) [Binary operator]
+                                                |      |      |             |      |-------(a) [Identifier]
+                                                |      |      |             |-------(not) [Unary operator]
+                                                |      |      |-------(-) [Unary operator]
+                                                |      |-------(Operators)
+                                                |             |-------(Operator)
+                                                |                    |-------(=) [Appropriation operator]
+                                                |                           |-------(c) [Identifier]
+                                                |                           |-------(Expression) [Expression]
+                                                |                                  |-------(c) [Identifier]
+                                                |                                  |-------(+) [Binary operator]
+                                                |                                  |-------(4) [Const]
+                                                |-------(Operators)
+                                                       |-------(Operator)
+                                                       |      |-------(=) [Appropriation operator]
+                                                       |             |-------(c) [Identifier]
+                                                       |             |-------(Expression) [Expression]
+                                                       |                    |-------(a) [Identifier]
+                                                       |                    |-------(-) [Binary operator]
+                                                       |                    |-------(b) [Identifier]
+                                                       |-------(Operators)
+                                                              |-------(Operator)
+                                                              |      |-------(=) [Appropriation operator]
+                                                              |             |-------(a) [Identifier]
+                                                              |             |-------(Expression) [Expression]
+                                                              |                    |-------(2) [Const]
+                                                              |                    |-------(*) [Binary operator]
+                                                              |                    |-------(Expression) [Expression]
+                                                              |                           |-------(b) [Identifier]
+                                                              |                           |-------(-) [Binary operator]
+                                                              |                           |-------(Expression) [Expression]
+                                                              |                                  |-------(c) [Identifier]
+                                                              |                                  |-------(*) [Binary operator]
+                                                              |                                  |-------(4) [Const]
+                                                              |-------(Loop)
+                                                                     |-------(Expression) [Expression]
+                                                                     |      |-------(Expression) [Expression]
+                                                                     |      |      |-------(Expression) [Expression]
+                                                                     |      |      |      |-------(c) [Identifier]
+                                                                     |      |      |      |-------(>) [Binary operator]
+                                                                     |      |      |      |-------(a) [Identifier]
+                                                                     |      |      |-------(&) [Binary operator]
+                                                                     |      |      |-------(Expression) [Expression]
+                                                                     |      |             |-------(Expression) [Expression]
+                                                                     |      |             |      |-------(b) [Identifier]
+                                                                     |      |             |      |-------(>) [Binary operator]
+                                                                     |      |             |      |-------(a) [Identifier]
+                                                                     |      |             |-------(not) [Unary operator]
+                                                                     |      |-------(-) [Unary operator]
+                                                                     |-------(Operators)
+                                                                            |-------(Operator)
+                                                                                   |-------(=) [Appropriation operator]
+                                                                                          |-------(c) [Identifier]
+                                                                                          |-------(Expression) [Expression]
+                                                                                                 |-------(c) [Identifier]
+                                                                                                 |-------(+) [Binary operator]
+                                                                                                 |-------(4) [Const]
+a = 15
+tmp0 = - 10
+c = tmp0
+b = a
+tmp2 = a + c
+tmp4 = c - 5
+tmp3 = a / tmp4
+tmp1 = tmp2 * tmp3
+b = tmp1
+L0:
+tmp7 = c > a
+tmp9 = b > a
+tmp8 = not tmp9
+tmp6 = tmp7 & tmp8
+tmp5 = - tmp6
+iffalse tmp5 goto L1
+tmp10 = c + 4
+c = tmp10
+goto L0
+L1:
+tmp11 = a - b
+c = tmp11
+tmp14 = c * 4
+tmp13 = b - tmp14
+tmp12 = 2 * tmp13
+a = tmp12
+L2:
+tmp17 = c > a
+tmp19 = b > a
+tmp18 = not tmp19
+tmp16 = tmp17 & tmp18
+tmp15 = - tmp16
+iffalse tmp15 goto L3
+tmp20 = c + 4
+c = tmp20
+goto L2
+L3:
